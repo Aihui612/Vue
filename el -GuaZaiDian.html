@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body id="body">
+		{{message}}
+		<div id="app" class="app">
+			{{message}}
+			<span>{{message}}</span>
+		</div>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		
+		<script>
+			var app = new Vue({
+				el:'#app',
+				//el:'.app',
+				//el:'div',
+				//el:'#body'
+				data:{
+					message:"你好！！！"
+				}
+			})
+		</script>
+	</body>
+</html>

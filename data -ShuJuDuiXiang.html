@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			{{ message }}
+			<h1>{{ school.name }} {{ school.mobile }}</h1>
+			<ul>
+				<li>{{ campus[0] }}</li>
+				<li>{{ campus[3] }}</li>
+				<li>{{ campus[1] }}</li>
+				<li>{{ campus[2] }}</li>
+			</ul>
+		</div>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					message:"你好 程序员！",
+					school:{
+						name:"小明",
+						mobile:"135-7590-4568"
+					},
+					campus:["北京","陕西","上海","广州"]
+				}
+			})
+		</script>
+	</body>
+</html>
