@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-on指令</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="v-on指令" v-on:click="doIt" />
+			<input type="button" value="v-on简写" @click="doIt" />
+			<input type="button" value="双击事件" @dblclick="doIt" />
+			<h2 @click="changefood">{{ food }}</h2>
+		</div>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					food:"西红柿炒鸡蛋"
+				},
+				methods:{
+					doIt:function(){
+						alert("IT行业")
+					},
+					changefood:function(){
+						console.log(this.food);
+						this.food+="挺好吃的"
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
